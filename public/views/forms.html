@@ -1,0 +1,50 @@
+<div class="container">
+<form name="upload_form">
+  <h3>{{act}} An Employee</h3>
+  <label>Photo:</label><br>
+    <img class="thumb" ng-show="!!photo" ngf-thumbnail="photo || img || '/imgs/default.jpg'"/><br><br>
+    <input type="file" ngf-select ng-model="photo" name="photo" ngf-pattern="'image/*'" accept="image/*" ngf-max-size="5MB" />
+    <i ng-show="upload_form.photo.$error.maxSize">Photo too large! max 5MB</i> 
+  <br>
+  <label>Name:</label>
+    <input type="text" class="form-control" ng-model="Name" >
+  <br>
+	<label>Title:</label>
+    <input type="text" class="form-control" ng-model="Title" >
+  <br>
+    <label>Sex:</label>
+	<p><input type="radio" ng-model="sex" value="Male" ng-checked="true">
+	<label class="radio-inline">Male</label>&nbsp&nbsp
+	<input type="radio" ng-model="sex" value="Female">
+	<label class="radio-inline">Female</label></p>
+  <br>
+	<label>Start Date:</label>
+    <p class="input-group">
+    <input type="text" class="form-control" uib-datepicker-popup ng-model="StartDate" is-open="popup.opened" datepicker-options="dateOptions" ng-required="true"   close-text="Close" />
+    <span class="input-group-btn">
+        <button type="button" class="btn btn-default" ng-click="open()"><i class="glyphicon glyphicon-calendar"></i></button>
+    </span>
+    </p>
+  <br>
+    <label>Office Phone:</label>
+    <input type="text" class="form-control" ng-model="OfficePhone">
+  <br>
+    <label>Cell Phone:</label>
+    <input type="text" class="form-control" ng-model="CellPhone" >
+  <br>
+    <label>SMS:</label>
+    <input type="text" class="form-control" ng-model="SMS" >
+  <br>
+    <label>Email:</label>
+    <input type="text" class="form-control" ng-model="Email" >
+  <br>
+    <label>Manager:</label>
+    <select ng-model="Manager" ng-options="empl.ID as empl.Name for empl in candManagers">
+      <option value="">
+    </select>
+  <br>
+  <button class="btn btn-success btn-default" ng-disabled="error || incomplete" ng-click="saveUser()">&#10004; Save</button>&nbsp&nbsp
+  <button class="btn btn-success btn-danger" ng-click="cancel()">&#10008; Cancel</button>
+</form>
+<p>
+</div>

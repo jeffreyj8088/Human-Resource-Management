@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Employment Management</title>
+		<script src="https://code.jquery.com/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/style.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.0.4/ng-file-upload.min.js"></script>
+		<script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.2.5.js"></script>
+	</head>
+
+	<body ng-app='employeeApp'>
+
+		<div ng-view ></div>
+
+		<script src="./app.js"></script>
+		<script src="./model/getEmployeeService.js"></script>
+		<script src="./controllers/empCtrl.js"></script>
+		<script src="./controllers/detailCtrl.js"></script>
+		<script src="./controllers/direRepCtrl.js"></script>
+		<script src="./controllers/newCtrl.js"></script>
+		<script src="./controllers/editCtrl.js"></script>
+	</body>
+</html>

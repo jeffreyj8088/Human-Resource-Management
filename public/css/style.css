@@ -1,0 +1,61 @@
+.center{
+	text-align: center;
+}
+.left{
+  float:left;
+  cursor: pointer;
+}
+.right{
+	float: right;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.inner-addon {
+  position: relative;
+}
+
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+
+.left-addon .glyphicon  { left:  0px; font-size: 26px;}
+.right-addon .glyphicon { right: 0px; font-size: 26px;}
+
+.left-addon input  { padding-left:  50px; width: 100% }
+.right-addon input { padding-right:  50px; width: 100% }
+
+.emply {
+    height: 50px;
+    font-size: 26px;
+}
+
+#new-emply {
+    font-size: 36px;
+    text-align: center;
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+.thumb{
+    width:150px;
+    height:150px;
+    margin:5px;
+}
+
+.detail {
+    text-align: center;
+    padding: 10px;
+}
+
+.detail-btn {
+    font-size: 20px;
+    width:150px;
+}
+
+.emply-table td {
+  font-size: 22px;
+}

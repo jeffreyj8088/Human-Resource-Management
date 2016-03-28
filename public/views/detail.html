@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="well h3 center"><a href="" ng-click="goToBack()"><span class="glyphicon glyphicon-chevron-left left"></span></a>Employee</div>
+	<table class="table table-striped">
+    <tbody>
+      <tr>
+        <td><img class="thumb" src="{{employee.img || '/imgs/default.jpg'}}" alt="{{employee.Name}}"></td>
+        <td><span class="h4">{{employee.Name}}</span><br>
+        	  {{employee.Title}}
+        </td>
+      </tr>
+      <tr>
+        <td>View Manager<br>{{ employee.Manager.Name || "No Manager"}}</td>
+        <td><a href="#/detail/{{employee.Manager._id}}/0"><span class="glyphicon glyphicon-chevron-right right" ng-show="employee.Manager._id">&nbsp</span></a></td>
+      </tr>
+      <tr>
+        <td>View Direct Reports
+        	<br>
+        	{{employee.reportTo.length}}
+        </td>
+        <td><a href="#/reports/{{employee.reportTo.toString()}}"><span class="glyphicon glyphicon-chevron-right right" ng-show="employee.reportTo.length">&nbsp</span></a></td>
+      </tr>
+      <tr>
+        <td>Call Office<br>{{employee.OfficePhone}}</td>
+        <td><span class="glyphicon glyphicon-earphone right">&nbsp</span></td>
+      </tr>
+      <tr>
+        <td>Call Cell<br>{{employee.CellPhone}}</td>
+        <td><span class="glyphicon glyphicon-earphone right">&nbsp</span></td>
+      </tr>
+      <tr>
+        <td>SMS<br>{{employee.SMS}}</td>
+        <td><span class="glyphicon glyphicon-phone right">&nbsp</span></td>
+      </tr>
+      <tr>
+        <td>Email<br>{{employee.Email}}</td>
+        <td><span class="glyphicon glyphicon-envelope right">&nbsp</span></td>
+      </tr>
+      <tr>
+        <td class="detail"><button class="btn btn-success btn-default detail-btn" ng-click="editEmply(employee._id)">&#9998; Edit</button></td>
+        <td class="detail"><button class="btn btn-danger btn-default detail-btn" ng-click="delEmply(employee._id)">&#10008; Delete</button></td>
+      </tr>
+    </tbody>
+	</table>
+</div>
