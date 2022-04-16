@@ -6,7 +6,7 @@
   "author": "Jeff",
   "dependencies": {
     "express": "~4.13.2",
-    "mongoose": "~4.4.10",
+    "mongoose": "~6.3.0",
     "body-parser": "~1.14.1",
     "multer": "~1.1.0"
   }
